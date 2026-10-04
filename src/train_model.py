@@ -82,3 +82,8 @@ submission.to_csv("outputs/submission.csv", index=False)
 
 print("\nSaved outputs/submission.csv")
 print(submission.head())
+import joblib
+
+joblib.dump(best_model, "outputs/model.joblib")
+joblib.dump(list(X.columns), "outputs/feature_columns.joblib")
+print("Saved model and feature columns to outputs/")
